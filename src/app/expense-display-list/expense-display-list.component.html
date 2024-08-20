@@ -1,0 +1,14 @@
+<div class="expense-list card p-5 mx-auto" style="width: 600px;">
+    <h2 class="text-center mb-3">Expense List</h2>
+    <ul class="list-group list-group-flush">
+        <li *ngFor="let expense of expenses" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+            <div>
+                <strong>{{ expense.description }}</strong>
+                <span class="text-muted"> {{ expense.category }} - {{ expense.amount | currency:'INR' }} </span>
+                <span class="text-secondary">{{ expense.date | date:'dd/MM/YYYY'}}</span>
+            </div>
+            <button class="btn btn-danger" (click)="deleteExpense(expense.id)">Delete</button>
+        </li>
+    </ul>
+</div>
+ 

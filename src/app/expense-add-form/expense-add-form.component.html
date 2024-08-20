@@ -1,0 +1,27 @@
+<div class="expense-form card p-5 mx-auto" style="width: 400px;">
+    <h1 class="text-center mb-2">Add Expense</h1>
+    <form (ngSubmit)="onFormSubmit()">
+        <div class="mb-2">
+            <label for="description" class="form-label">Description:</label>
+            <input type="text" [(ngModel)]="description" class="form-control"  name="description" id="description">
+        </div>
+        <div class="mb-2">
+            <label for="amount" class="form-label">Amount:</label>
+            <input type="number" [(ngModel)]="amount" class="form-control" name="amount" id="amount">
+        </div>
+        <div class="mb-2">
+            <label for="category" class="form-label">Category:</label>
+            <select name="category" [(ngModel)]="category" id="category" class="form-select">
+                <option value="food">Food</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="traveling">Traveling</option>
+                <option value="others">Others</option>
+            </select>
+        </div>
+        <div class="mb-2">
+            <label for="date" class="form-label">Date:</label>
+            <input type="date" [(ngModel)]="date" name="date" id="date" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-outline-success w-100 mt-2">Add Expense</button>
+    </form>
+</div>
